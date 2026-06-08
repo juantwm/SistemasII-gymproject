@@ -1,0 +1,177 @@
+import type {
+  ClienteMiembro,
+  Cuota,
+  Empleado,
+  Equipo,
+  Gasto,
+} from "../types";
+
+export const empleadosIniciales: Empleado[] = [
+  {
+    id: 1,
+    estado: "Activo",
+    nombreApellido: "Carlos Gómez",
+    dni: "20123456",
+    direccion: "Av. Principal 123",
+    telefono: "555-1001",
+    mail: "carlos@heracles.com",
+    estadoCivil: "Soltero/a",
+    cantidadHijos: 0,
+    fechaNacimiento: "1990-05-15",
+    rol: "Recepcionista",
+    estadoLaboral: "Activo",
+    legajo: "EMP001",
+  },
+  {
+    id: 2,
+    estado: "Activo",
+    nombreApellido: "Laura Fernández",
+    dni: "25987654",
+    direccion: "Calle Flores 456",
+    telefono: "555-1002",
+    mail: "laura@heracles.com",
+    estadoCivil: "Casado/a",
+    cantidadHijos: 2,
+    fechaNacimiento: "1985-08-22",
+    rol: "Instructor",
+    estadoLaboral: "Activo",
+    legajo: "EMP002",
+  },
+];
+
+export const equiposIniciales: Equipo[] = [
+  {
+    id: 1,
+    estado: "Activo",
+    nombre: "Cinta de Correr Pro",
+    categoria: "Cardio",
+    fechaIngreso: "2023-01-15",
+    modelo: "TR-5000",
+    descripcion: "Cinta de correr profesional con pantalla táctil",
+  },
+  {
+    id: 2,
+    estado: "Activo",
+    nombre: "Bicicleta Spinning",
+    categoria: "Cardio",
+    fechaIngreso: "2023-02-20",
+    modelo: "SP-300",
+    descripcion: "Bicicleta de spinning con resistencia magnética",
+  },
+];
+
+export const gastosIniciales: Gasto[] = [
+  {
+    id: 1,
+    estado: "Activo",
+    nroFactura: "F-001-00123",
+    fecha: "2024-10-15",
+    concepto: "Electricidad",
+    monto: 5000,
+    categoria: "Servicios",
+    observaciones: "Consumo octubre 2024",
+  },
+  {
+    id: 2,
+    estado: "Activo",
+    nroFactura: "F-002-00456",
+    fecha: "2024-10-18",
+    concepto: "Mantenimiento equipos",
+    monto: 15000,
+    categoria: "Mantenimiento",
+    observaciones: "Revisión trimestral",
+  },
+];
+
+export const clientesIniciales: ClienteMiembro[] = [
+  {
+    id: 101010,
+    estado: "Activo",
+    nombreApellido: "Juan Torres",
+    dni: "30123456",
+    direccion: "Av. Libertador 789",
+    telefono: "555-0101",
+    mail: "juanmatorres161@gmail.com",
+    fechaNacimiento: "1995-03-10",
+    membresia: "Mensual",
+    fechaInicio: "2024-01-15",
+  },
+  {
+    id: 1002,
+    estado: "Activo",
+    nombreApellido: "María García",
+    dni: "28456789",
+    direccion: "Calle San Martín 321",
+    telefono: "555-0102",
+    mail: "maria@email.com",
+    fechaNacimiento: "1992-07-25",
+    membresia: "Trimestral",
+    fechaInicio: "2024-02-01",
+  },
+  {
+    id: 1003,
+    estado: "Activo",
+    nombreApellido: "Carlos López",
+    dni: "35789123",
+    direccion: "Paseo Colón 654",
+    telefono: "555-0103",
+    mail: "carlos@email.com",
+    fechaNacimiento: "1988-11-30",
+    membresia: "Anual",
+    fechaInicio: "2024-01-01",
+  },
+  {
+    id: 1004,
+    estado: "Activo",
+    nombreApellido: "Ana Martínez",
+    dni: "32654987",
+    direccion: "Av. Belgrano 147",
+    telefono: "555-0104",
+    mail: "ana@email.com",
+    fechaNacimiento: "1998-05-18",
+    membresia: "Mensual",
+    fechaInicio: "2024-10-20",
+  },
+  {
+    id: 1005,
+    estado: "Activo",
+    nombreApellido: "Pedro Sánchez",
+    dni: "29321654",
+    direccion: "Calle Rivadavia 852",
+    telefono: "555-0105",
+    mail: "pedro@email.com",
+    fechaNacimiento: "1990-09-05",
+    membresia: "Trimestral",
+    fechaInicio: "2023-12-01",
+  },
+];
+
+export const cuotasIniciales: Cuota[] = [
+  { id: 1, clienteId: 101010, clienteNombre: "Juan Torres", fechaPago: "2024-10-01", fechaVencimiento: "2024-11-01", monto: 35000, medioPago: "Tarjeta", estado: "Pagado" },
+  { id: 2, clienteId: 101010, clienteNombre: "Juan Torres", fechaPago: "2024-09-01", fechaVencimiento: "2024-10-01", monto: 35000, medioPago: "Tarjeta", estado: "Pagado" },
+  { id: 7, clienteId: 101010, clienteNombre: "Juan Torres", fechaPago: "", fechaVencimiento: "2024-11-24", monto: 35000, medioPago: "", estado: "Pendiente" },
+  { id: 3, clienteId: 1002, clienteNombre: "María García", fechaPago: "2024-10-01", fechaVencimiento: "2025-01-01", monto: 105000, medioPago: "Efectivo", estado: "Pagado" },
+  { id: 4, clienteId: 1003, clienteNombre: "Carlos López", fechaPago: "2024-01-01", fechaVencimiento: "2025-01-01", monto: 420000, medioPago: "Transferencia", estado: "Pagado" },
+  { id: 5, clienteId: 1004, clienteNombre: "Ana Martínez", fechaPago: "2024-10-20", fechaVencimiento: "2024-11-20", monto: 35000, medioPago: "Tarjeta", estado: "Pagado" },
+  { id: 6, clienteId: 1005, clienteNombre: "Pedro Sánchez", fechaPago: "2024-10-01", fechaVencimiento: "2025-01-01", monto: 105000, medioPago: "Tarjeta", estado: "Pagado" },
+];
+
+export const ingresosMensuales = [
+  { mes: "Ene", monto: 15000 },
+  { mes: "Feb", monto: 18000 },
+  { mes: "Mar", monto: 16500 },
+  { mes: "Abr", monto: 19000 },
+  { mes: "May", monto: 20500 },
+  { mes: "Jun", monto: 22000 },
+  { mes: "Jul", monto: 21000 },
+  { mes: "Ago", monto: 23500 },
+  { mes: "Sep", monto: 24000 },
+  { mes: "Oct", monto: 25500 },
+];
+
+export const ingresosAnuales = [
+  { año: "2021", monto: 180000 },
+  { año: "2022", monto: 210000 },
+  { año: "2023", monto: 245000 },
+  { año: "2024", monto: 280000 },
+];
